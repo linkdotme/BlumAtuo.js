@@ -39,11 +39,11 @@ class GameService {
     }
 
     async claimGame(user, gameId, eligibleDogs) {
-        let points = generatorHelper.randomInt(180, 200);
+        let points = generatorHelper.randomInt(200, 250);
         let dogs = 0;
         if (eligibleDogs) {
-            points = generatorHelper.randomInt(90, 110);
-            dogs = generatorHelper.randomInt(15, 20) * 5;
+            points = generatorHelper.randomInt(100, 110);
+            dogs = generatorHelper.randomInt(17, 20) * 5;
         }
         const payload = await this.createPlayload(user, gameId, points, dogs);
 
